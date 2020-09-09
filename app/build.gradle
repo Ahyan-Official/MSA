@@ -1,0 +1,69 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+
+
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.alfaisalmsa.app.a3x2"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                onesignal_app_id: '5adf3bf4-7637-4329-9fd6-c585fdb3e51f',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+
+    //implementation 'com.google.android.gms:play-services-ads:18.2.0'
+    //implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+
+    implementation 'com.onesignal:OneSignal:[3.13.0, 3.99.99]'
+//
+//    implementation 'org.adblockplus:adblock-android:3.0'
+
+
+
+    implementation 'com.facebook.android:audience-network-sdk:5.10.0'
+
+
+}
+apply plugin: 'com.google.gms.google-services'

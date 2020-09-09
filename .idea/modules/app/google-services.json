@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "683230709235",
+    "firebase_url": "https://alfaisal-msa.firebaseio.com",
+    "project_id": "alfaisal-msa",
+    "storage_bucket": "alfaisal-msa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683230709235:android:647f22f1d99283cfa33e86",
+        "android_client_info": {
+          "package_name": "com.alfaisalmsa.app.a3x2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683230709235-o2aom2mt5qg8el384cnfa9k80b3t3rv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alfaisalmsa.app.a3x2",
+            "certificate_hash": "995211d594177dcb23a1da486f757ef5a927a4c4"
+          }
+        },
+        {
+          "client_id": "683230709235-p3iiicc7e5fskkec24hp8ao1l71mbmev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh7dGoiu1HqnYixNI86JAnEuBxktCBvw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683230709235-p3iiicc7e5fskkec24hp8ao1l71mbmev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
